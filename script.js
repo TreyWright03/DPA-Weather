@@ -54,7 +54,7 @@ function getWeatherIcon(shortForecast) {
         return 'svg/day.svg';
     } 
     
-    return 'Overflow.png'; // if a weather condition is not declared above this image will be displayed so we know we need to add an image for it
+    return 'svg/cloudy.svg'; // if a weather condition is not declared above this image will be displayed so we know we need to add an image for it
 }
 
 // Function to format and display weather information in HTML
@@ -81,8 +81,7 @@ async function displayWeatherInfo(locationCode) {
         const currentImage = getWeatherIcon(currentPeriod.shortForecast); 
         
         // Populate the weather boxes with the current hour's data
-        document.getElementById('weather-box-Disp').innerHTML = `<p>Current</p>`;
-        document.getElementById('weather-box-TempDisp').innerHTML = `<p>${currentPeriod.temperature} °F</p>`;
+        document.getElementById('weather-box-TempDisp').innerHTML = `<p>${currentPeriod.temperature} °</p>`;
         document.getElementById('weather-box-IconDisp').innerHTML = `<img src="Media/${currentImage}">`;
         document.getElementById('weather-box-TL').innerHTML = `<p>${currentPeriod.shortForecast}</p>`;
         document.getElementById('weather-box-BR').innerHTML = `<p>Precipitation Chance: ${currentPeriod.probabilityOfPrecipitation.value}%</p>`;
