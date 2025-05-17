@@ -1,3 +1,7 @@
+:root {
+    --Border-radius: 30px;
+}
+
 body, html {
     height: 100%;
     margin: 0;
@@ -14,12 +18,28 @@ body, html {
     height: 1080px; /* Use viewport height for full-screen background */
     background-color: #0B131E;
     color: white;
-}   
+}
+.wather-app-left {
+    display: flex;
+    flex-direction: column;
+    width: 1000px;
+    height: 960px; /* Use viewport height for full-screen background */
+    margin-left: 20px;
+    margin-top: 20px;
+    color: white;
+}
+.weather-app-right {
+    display: flex;
+    flex-direction: column;
+    width: 860px;
+    height: 960px; /* Use viewport height for full-screen background */
+    margin-top: 20px;
+    margin-left: 20px;
+    color: white;
+}
 .weather-box-Header {
     display: flex;
     flex-wrap: wrap;
-    margin-left: 20px;
-    margin-top: 20px;
     width: 1000px;
     height: 340px;
     color: white;
@@ -47,29 +67,28 @@ body, html {
     display: flex;
     position: relative;
     align-items: center;
-    font-size: 7em; /* Increase font size for these boxes */
-    width: auto;  /* Adjusted size */
-    height: 150px; /* Adjusted size */
+    font-size: 7em; 
+    width: auto;  
+    height: 150px; 
     margin-left: 11rem;
 }
 #weather-box-IconDisp {
     position: relative;
-    margin-top: -2.7rem;
+    margin-top: -2rem;
     margin-left: 14rem;
 }
 
 #weather-box-IconDisp img {
-    width: 225px;  /* Adjusted size */
-    height: 225px; /* Adjusted size */
+    width: 225px;  
+    height: 225px; 
 }
 
 .birthday-box{
     display: flex;
-    margin-left: 20px;
-    margin-top: 20px;
     width: 860px;
     height: 340px;
     background-color: #202B3B;
+    border-radius: var(--Border-radius);
     color: white;
 }
 
@@ -77,28 +96,61 @@ body, html {
     display: flex;
     width: 1000px;
     height: 290px;
-    margin-left: 20px;
+    margin-top: 20px;
     background-color: #202B3B;
+    border-radius: var(--Border-radius);
     color: white;
+}
+
+.weather-box-Forecast div {
+    display: flex;
+    font-size: 2.5rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 175px;
+    height: 300px;
+}
+.weather-box-Forecast img {
+    width: 200px; /* Adjust width as needed */
+    height: 200px; /* Adjust height as needed */
+}
+.weather-box-Forecast p {
+    margin: -25px;
 }
 
 .events-box {
     display: flex;
     width: 860px;
     height: 600px;
-    margin-left: 20px;
+    margin-top: 20px;
+    border-radius: var(--Border-radius);
     background-color: #202B3B;
     color: white;
 }
 
 .weather-box-Conditions {
     display: flex;
+    flex-wrap: wrap;
     width: 1000px;
     height: 290px;
-    margin-top: -305px;
-    margin-left: 20px;
+    margin-top: 20px;
+    border-radius: var(--Border-radius);
     background-color: #202B3B;
     color: white;
+}
+
+#weather-box-TL,
+#weather-box-TR,
+#weather-box-BL,
+#weather-box-BR {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    width: 400px; /* Adjust width as needed */
+    height: 125px;
 }
 
 .detailed-weather-carousel{
@@ -106,6 +158,7 @@ body, html {
     width: 1880px;
     height: 60px;
     margin-left: 20px;
+    border-radius: var(--Border-radius);
     background-color: #202B3B;
     color: white;
 }

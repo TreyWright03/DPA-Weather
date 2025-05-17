@@ -115,7 +115,7 @@ async function displayWeatherInfo(locationCode) {
                 periodDiv.innerHTML = `
                     <p>${startTime}</p>
                     <img src="Media/${WeatherIcon}">
-                    <p>${period.temperature} °F</p>      
+                    <p>${period.temperature} °</p>      
                 `;
 
                 weatherContainer.appendChild(periodDiv);
